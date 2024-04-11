@@ -1,0 +1,68 @@
+.postCard {
+    display: grid;
+    border-style: solid;
+    border-color: rgb(113, 113, 113);
+    border-radius: 7px;
+    width: 600px;
+    text-align: start;
+    padding: 20px;
+    grid-template-rows: repeat(6, 0fr);
+}
+
+.postCard p,  
+.postCard a, 
+.postCard h3, 
+.postCard .commentsContainer, 
+.postCard button{
+    margin: 0;
+    grid-column-start: 1;
+}
+
+.postCard .date {
+    grid-column-start: 2;
+    text-align: end;
+    font-weight: 100;
+}
+
+.postCard .text {
+    font-weight: 200;
+}
+
+.postCardContainer {
+    display: grid;
+    justify-content: center;
+    gap: 8px;
+}
+
+.comments {
+    display: grid;
+    border-style: solid;
+    border-color: rgb(113, 113, 113);
+    border-radius: 7px;
+    padding: 8px;
+}
+
+.comments .date {
+    grid-column-start: 2;
+    text-align: end;
+    font-weight: 100;
+}
+
+.commentsContainer {
+    display: grid;
+    grid-column-end: 3;
+    gap: 8px;
+    padding: 8px;
+}
+
+.postCard button {
+    grid-column-end: 3;
+    border-color: white;
+} 
+
+.postCard form {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    gap: 8px;
+    padding-top: 15px;
+}
