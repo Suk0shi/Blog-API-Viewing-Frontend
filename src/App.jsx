@@ -11,7 +11,7 @@ function App({setId, setEditInfo}) {
   const [blogData, setBlogData] = useState()
   
   useEffect(() => {
-    fetch('http://localhost:3000/blog/posts', {
+    fetch('https://bl0gapi.adaptable.app/blog/posts', {
       mode: 'cors'})
       .then((response) => response.json())
       .then((data) => { console.log(data), setBlogData(data)})
