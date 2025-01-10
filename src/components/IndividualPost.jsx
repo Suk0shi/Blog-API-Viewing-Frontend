@@ -10,7 +10,7 @@ function IndividualPost({id}) {
   
     //fetch individual blog post with comments 
     useEffect(() => {
-        fetch(`https://bl0gapi.adaptable.app/blog/post/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/blog/post/${id}`, {
           mode: 'cors'})
           .then((response) => response.json())
           .then((data) => { console.log(data), setData(data)})
@@ -22,7 +22,7 @@ function IndividualPost({id}) {
       const formData = new FormData(e.target);
       const payload = Object.fromEntries(formData);
       
-      fetch(`https://bl0gapi.adaptable.app/blog/comment/${id}`, {
+      fetch(`${import.meta.env.VITE_API_URL}/blog/comment/${id}`, {
         method: 'Post', 
         headers: {
           Accept: 'application/json',
@@ -86,7 +86,7 @@ function IndividualPost({id}) {
 
     return (
       <>
-        <form action={`https://bl0gapi.adaptable.app/blog/comment/${id}`} method="POST" 
+        <form action={`${import.meta.env.VITE_API_URL}/blog/comment/${id}`} method="POST" 
         onSubmit={handleSubmit}>
             <label htmlFor="name"> Name </label>
             <input type="text" name='name' placeholder='name'/>
